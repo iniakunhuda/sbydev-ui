@@ -52,7 +52,7 @@ export default function FeaturesBlocks() {
                   <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
 
-                  <a className="btn text-sm md:mt-15 sm:mt-10 py-2 px-6 text-white bg-black hover:bg-green-800 rounded-full">Detail Event</a>
+                  <a className="btn text-sm md:mt-15 mt-10 py-2 px-6 text-white bg-black hover:bg-green-800 rounded-full">Detail Event</a>
                 </div>
               </div>
             ))}
