@@ -1,4 +1,4 @@
-import VideoThumb from '@/public/images/hero-image.png'
+import VideoThumb from '@/public/images/sbydev-team.png'
 import ModalVideo from '@/components/modal-video'
 
 export default function Hero() {
@@ -11,8 +11,8 @@ export default function Hero() {
           <defs>
             <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="illustration-01">
               <stop stopColor="#FFF" offset="0%" />
-              <stop stopColor="#EAEAEA" offset="77.402%" />
-              <stop stopColor="#DFDFDF" offset="100%" />
+              <stop stopColor="#16a34a" offset="77.402%" />
+              <stop stopColor="#16a34a" offset="100%" />
             </linearGradient>
           </defs>
           <g fill="url(#illustration-01)" fillRule="evenodd">
@@ -56,8 +56,8 @@ export default function Hero() {
           {/* Hero image */}
           <ModalVideo
             thumb={VideoThumb}
-            thumbWidth={768}
-            thumbHeight={432}
+            thumbWidth={600}
+            thumbHeight={300}
             thumbAlt="Modal video thumbnail"
             video="/videos/video.mp4"
             videoWidth={1920}

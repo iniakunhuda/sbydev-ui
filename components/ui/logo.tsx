@@ -4,6 +4,8 @@ import Image from "next/image"
 
 export default function Logo() {
   return (
-    <Image className="relative rounded-full" src={LogoImage} width={200} height={96} alt="Logo" />
+    <Link href="/">
+      <Image className="relative rounded-full" src={LogoImage} width={200} height={96} alt="Logo" />
+    </Link>
   )
 }
