@@ -17,7 +17,7 @@ export default function AboutUs() {
 
       <div className="container max-w-screen-xl mx-auto px-4 pt-32 pb-12">
         <section className='relative'>
-          <div className="text-center py-12 lg:py-24">
+          <div className="text-center py-0 lg:py-12">
 
             <h2 className="font-semibold text-gray-900 text-2xl md:text-3xl lg:text-4xl mb-5">Tentang Kami</h2>
 
