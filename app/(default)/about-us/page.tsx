@@ -70,7 +70,7 @@ export default function AboutUs() {
         </section>
 
         {/* Gallery */}
-        <section>
+        <section className='relative'>
           <div className="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
             <div className="w-full rounded hover:shadow-2xl">
               <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
