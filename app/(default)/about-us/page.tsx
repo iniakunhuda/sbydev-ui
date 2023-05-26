@@ -1,13 +1,22 @@
-export const metadata = {
-  title: 'About Us - Surabayadev',
-  description: 'Page description',
-}
+import Image from 'next/image'
+import Accordion from '@/components/utils/accordion'
+
+// import { useState } from "react";
 
 export default function AboutUs() {
+  // const [tab, setTab] = useState<number>(1);
+
   return (
     <section className="bg-gradient-to-b from-gray-100 to-white">
+      <div className="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-green-50">
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white">
+        </div>
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white">
+        </div>
+      </div>
+
       <div className="container max-w-screen-xl mx-auto px-4 pt-32 pb-12">
-        <section>
+        <section className='relative'>
           <div className="text-center py-12 lg:py-24">
 
             <h2 className="font-semibold text-gray-900 text-2xl md:text-3xl lg:text-4xl mb-5">Tentang Kami</h2>
@@ -15,8 +24,8 @@ export default function AboutUs() {
             <p className="font-normal text-gray-500 text-base md:text-lg lg:text-xl mb-16">SurabayaDev merupakan komunitas teknologi yang dibentuk sejak tahun 2010 <br /> dan merupakan wadah untuk belajar dan kolaborasi di Kota Surabaya</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-12 lg:mb-24">
-            <div className="card">
+          <div className="grid grid-cols-1 lg:grid-cols-2 mb-12 lg:mb-24">
+            {/* <div className="card">
               <div className="text-center mb-20 lg:mb-0">
                 <div className="flex justify-center mb-5">
                   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +37,7 @@ export default function AboutUs() {
 
                 <p className="font-normal text-gray-500 text-sm lg:text-base">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor incididunt <br /> ut labore et dolore magna aliqua.</p>
               </div>
-            </div>
+            </div> */}
 
             <div className="card">
               <div className="text-center mb-20 lg:mb-0">
@@ -60,21 +69,169 @@ export default function AboutUs() {
           </div>
         </section>
 
+        {/* Gallery */}
+        <section>
+          <div className="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
+            <div className="w-full rounded hover:shadow-2xl">
+              <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                alt="image"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <div className="w-full rounded hover:opacity-50">
+              <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                alt="image"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <div className="w-full rounded hover:shadow-2xl">
+              <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                alt="image"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <div className="w-full rounded hover:shadow-2xl">
+              <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                alt="image"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <div className="w-full rounded hover:shadow-2xl">
+              <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                alt="image"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <div className="w-full rounded hover:shadow-2xl">
+              <Image src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                alt="image"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }} />
+            </div>
+          </div>
+        </section>
+
+        {/* Teams */}
         <section>
           <div className="container max-w-screen-xl mx-auto px-4">
             <div className="text-center py-12 lg:py-24">
-              <h2 className="font-semibold text-gray-900 text-2xl md:text-3xl lg:text-4xl mb-5">Frequently asked questions</h2>
+              <h2 className="font-semibold text-gray-900 text-2xl md:text-3xl lg:text-4xl mb-5">Teams</h2>
+            </div>
+            <div className="">
+              <div className="flex flex-wrap -m-4">
+                <div className="w-full p-4 md:w-1/3">
+                  <div className="p-6 border shadow-xl rounded-3xl">
+                    <a className="inline-flex items-center mb-2">
+                      <Image width={50} height={50} alt="blog" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80" className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full" />
+                      <span className="flex flex-col flex-grow pl-4">
+                        <span className="text-xs uppercase text-slate-600">Terry Crews</span>
+                      </span>
+                    </a>
+                    <p className="text-sm leading-relaxed text-gray-500">
+                      "Wicked Templates is the next killer app. Wicked Templates was worth a fortune to my company."
+                    </p>
+                  </div>
+                  <div className="p-6 mt-4 border shadow-xl rounded-3xl">
+                    <a className="inline-flex items-center mb-2">
+                      <Image width={50} height={50} alt="blog" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80" className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full" />
+                      <span className="flex flex-col flex-grow pl-4">
+                        <span className="text-xs uppercase text-slate-600">Will Farrel</span>
+                      </span>
+                    </a>
+                    <p className="text-sm leading-relaxed text-gray-500">
+                      "Thanks Wicked Templates! I couldn't have asked for more than this. Man, this thing is getting better and better as I learn more about it. Nice
+                      work on your Wicked Templates."
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full p-4 md:w-1/3">
+                  <div className="p-6 border shadow-xl rounded-3xl">
+                    <a className="inline-flex items-center mb-2">
+                      <Image width={50} height={50} alt="blog" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80" className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full" />
+                      <span className="flex flex-col flex-grow pl-4">
+                        <span className="text-xs uppercase text-slate-600">Chris Tucker</span>
+                      </span>
+                    </a>
+                    <p className="text-sm leading-relaxed text-gray-500">"I love Wicked Templates. I could probably go into sales for you."</p>
+                  </div>
+                  <div className="p-6 mt-4 border shadow-xl rounded-3xl">
+                    <a className="inline-flex items-center mb-2">
+                      <Image width={50} height={50} alt="blog" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80" className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full" />
+                      <span className="flex flex-col flex-grow pl-4">
+                        <span className="text-xs uppercase text-slate-600">Marie Curie</span>
+                      </span>
+                    </a>
+                    <p className="text-sm leading-relaxed text-gray-500">
+                      "Great job, I will definitely be ordering again! I couldn't have asked for more than this. Really good."
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full p-4 md:w-1/3">
+                  <div className="p-6 border shadow-xl rounded-3xl">
+                    <a className="inline-flex items-center mb-2">
+                      <Image width={50} height={50} alt="blog" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80" className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full" />
+                      <span className="flex flex-col flex-grow pl-4">
+                        <span className="text-xs uppercase text-slate-600">Kevin Hart</span>
+                      </span>
+                    </a>
+                    <p className="text-sm leading-relaxed text-gray-500">
+                      "I just can't get enough of Wicked Templates. I want to get a T-Shirt with Wicked Templates on it so I can show it off to everyone. Absolutely
+                      wonderful! Keep up the excellent work. Wicked Templates is worth much more than I paid."
+                    </p>
+                  </div>
+                  <div className="p-6 mt-4 border shadow-xl rounded-3xl">
+                    <a className="inline-flex items-center mb-2">
+                      <Image width={50} height={50} alt="blog" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80" className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full" />
+                      <span className="flex flex-col flex-grow pl-4">
+                        <span className="text-xs uppercase text-slate-600">Sara Fitzpatrick</span>
+                      </span>
+                    </a>
+                    <p className="text-sm leading-relaxed text-gray-500">"Your company is truly upstanding and is behind its product 100%."</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-              <p className="font-normal text-gray-500 text-base lg:text-xl mb-16">Everything you need to know about the start working with us.</p>
 
-              <hr className="mb-6" />
+        {/* FAQ */}
+        <section>
+          <div className="container max-w-screen-xl mx-auto px-4">
+            <div className="text-center py-12 lg:py-24">
+              <h2 className="font-semibold text-gray-900 text-2xl md:text-3xl lg:text-4xl mb-5">FAQ</h2>
+
+              <p className="font-normal text-gray-500 text-base lg:text-xl mb-16">Semua yang mungkin ingin kamu tanyakan tentang Surabayadev</p>
 
               <div className="relative text-left">
-                <h4 className="accordion font-medium text-gray-900 text-lg cursor-pointer mb-2">
+                <ul className="ml-10">
+                  <Accordion title="Accordion Title" active={false}>
+                    <p>Accordion Content</p>
+                  </Accordion>
+                  <Accordion title="Accordion Title" active={false}>
+                    <p>Accordion Content</p>
+                  </Accordion>
+                </ul>
+              </div>
+
+              {/* <div className="relative text-left">
+                <h4 className="accordion font-medium text-gray-900 text-lg cursor-pointer mb-2" onClick={(e) => { e.preventDefault(); setTab(1); }}>
                   Do you give me invoice?
                 </h4>
 
-                <div className="hidden">
+                <div className={tab == 1 ? '' : 'hidden'}>
                   <p className="font-normal text-gray-500 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae consectetur culpa rem doloribus maxime hic nisi nostrum dolorem ducimus odio repellendus minima, ipsum quidem numquam quia natus similique id?</p>
                 </div>
               </div>
@@ -82,11 +239,11 @@ export default function AboutUs() {
               <hr className="mt-8 mb-6" />
 
               <div className="relative text-left">
-                <h4 className="accordion font-medium text-gray-900 text-lg cursor-pointer mb-2">
+                <h4 className="accordion font-medium text-gray-900 text-lg cursor-pointer mb-2" onClick={(e) => { e.preventDefault(); setTab(2); }}>
                   Are personal social accounts required?
                 </h4>
 
-                <div className="hidden">
+                <div className={tab == 2 ? '' : 'hidden'}>
                   <p className="font-normal text-gray-500 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae consectetur culpa rem doloribus maxime hic nisi nostrum dolorem ducimus odio repellendus minima, ipsum quidem numquam quia natus similique id?</p>
                 </div>
               </div>
@@ -94,38 +251,14 @@ export default function AboutUs() {
               <hr className="mt-8 mb-6" />
 
               <div className="relative text-left">
-                <h4 className="accordion font-medium text-gray-900 text-lg cursor-pointer mb-2">
+                <h4 className="accordion font-medium text-gray-900 text-lg cursor-pointer mb-2" onClick={(e) => { e.preventDefault(); setTab(3); }}>
                   Is tracking permission granted for SEO tools?
                 </h4>
 
-                <div className="hidden">
+                <div className={tab == 3 ? '' : 'hidden'}>
                   <p className="font-normal text-gray-500 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae consectetur culpa rem doloribus maxime hic nisi nostrum dolorem ducimus odio repellendus minima, ipsum quidem numquam quia natus similique id?</p>
                 </div>
-              </div>
-
-              <hr className="mt-8 mb-6" />
-
-              <div className="relative text-left">
-                <h4 className="accordion font-medium text-gray-900 text-lg cursor-pointer mb-2">
-                  Do you guarantee organic traffic?
-                </h4>
-
-                <div className="hidden">
-                  <p className="font-normal text-gray-500 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae consectetur culpa rem doloribus maxime hic nisi nostrum dolorem ducimus odio repellendus minima, ipsum quidem numquam quia natus similique id?</p>
-                </div>
-              </div>
-
-              <hr className="mt-8 mb-6" />
-
-              <div className="relative text-left">
-                <h4 className="accordion font-medium text-gray-900 text-lg cursor-pointer mb-2">
-                  How long does it usually take for the average marketing job?
-                </h4>
-
-                <div className="hidden">
-                  <p className="font-normal text-gray-500 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae consectetur culpa rem doloribus maxime hic nisi nostrum dolorem ducimus odio repellendus minima, ipsum quidem numquam quia natus similique id?</p>
-                </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

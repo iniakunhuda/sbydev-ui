@@ -64,8 +64,6 @@ export default function FeaturesBlocks() {
                 </span>
               </a>
             </div>
-
-
           </div>
 
         </div>
