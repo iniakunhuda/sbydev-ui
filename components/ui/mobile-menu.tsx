@@ -1,35 +1,41 @@
-'use client'
+'use client';
 
-import { useState, useRef, useEffect } from 'react'
-import { Transition } from '@headlessui/react'
-import Link from 'next/link'
+import { useState, useRef, useEffect } from 'react';
+import { Transition } from '@headlessui/react';
+import Link from 'next/link';
+import headerTitle from './headerTitle';
 
 export default function MobileMenu() {
-  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false)
+  const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
-  const trigger = useRef<HTMLButtonElement>(null)
-  const mobileNav = useRef<HTMLDivElement>(null)
+  const trigger = useRef<HTMLButtonElement>(null);
+  const mobileNav = useRef<HTMLDivElement>(null);
 
   // close the mobile menu on click outside
   useEffect(() => {
     const clickHandler = ({ target }: { target: EventTarget | null }): void => {
       if (!mobileNav.current || !trigger.current) return;
-      if (!mobileNavOpen || mobileNav.current.contains(target as Node) || trigger.current.contains(target as Node)) return;
-      setMobileNavOpen(false)
+      if (
+        !mobileNavOpen ||
+        mobileNav.current.contains(target as Node) ||
+        trigger.current.contains(target as Node)
+      )
+        return;
+      setMobileNavOpen(false);
     };
-    document.addEventListener('click', clickHandler)
-    return () => document.removeEventListener('click', clickHandler)
-  })
+    document.addEventListener('click', clickHandler);
+    return () => document.removeEventListener('click', clickHandler);
+  });
 
   // close the mobile menu if the esc key is pressed
   useEffect(() => {
     const keyHandler = ({ keyCode }: { keyCode: number }): void => {
       if (!mobileNavOpen || keyCode !== 27) return;
-      setMobileNavOpen(false)
+      setMobileNavOpen(false);
     };
-    document.addEventListener('keydown', keyHandler)
-    return () => document.removeEventListener('keydown', keyHandler)
-  })
+    document.addEventListener('keydown', keyHandler);
+    return () => document.removeEventListener('keydown', keyHandler);
+  });
 
   return (
     <div className="flex md:hidden">
@@ -39,10 +45,12 @@ export default function MobileMenu() {
         className={`hamburger ${mobileNavOpen && 'active'}`}
         aria-controls="mobile-nav"
         aria-expanded={mobileNavOpen}
-        onClick={() => setMobileNavOpen(!mobileNavOpen)}
-      >
+        onClick={() => setMobileNavOpen(!mobileNavOpen)}>
         <span className="sr-only">Menu</span>
-        <svg className="w-6 h-6 fill-current text-gray-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className="w-6 h-6 fill-current text-gray-900"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
           <rect y="4" width="24" height="2" />
           <rect y="11" width="24" height="2" />
           <rect y="18" width="24" height="2" />
@@ -61,23 +69,31 @@ export default function MobileMenu() {
           enterTo="opacity-100 translate-y-0"
           leave="transition ease-out duration-200"
           leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
+          leaveTo="opacity-0">
           <ul className="px-5 py-2">
+            {headerTitle.map((item) => (
+              <li>
+                <Link
+                  href={item.link}
+                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+
             <li>
-              <Link href="/about-us" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Tentang Kami</Link>
-            </li>
-            <li>
-              <Link href="/event" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Event</Link>
-            </li>
-            <li>
-              <Link href="/blog" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Blog</Link>
-            </li>
-            <li>
-              <Link href="" className="btn-sm text-gray-200 bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:bg-gray-800 ml-3">
+              <Link
+                href=""
+                className="btn-sm text-gray-200 bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:bg-gray-800 ml-3">
                 <span>Hubungi Kami</span>
-                <svg className="w-3 h-3 fill-current text-gray-200 shrink-0 ml-2 -mr-1" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fillRule="nonzero" />
+                <svg
+                  className="w-3 h-3 fill-current text-gray-200 shrink-0 ml-2 -mr-1"
+                  viewBox="0 0 12 12"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
+                    fillRule="nonzero"
+                  />
                 </svg>
               </Link>
             </li>
@@ -85,5 +101,5 @@ export default function MobileMenu() {
         </Transition>
       </div>
     </div>
-  )
+  );
 }
