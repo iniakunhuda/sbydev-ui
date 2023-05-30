@@ -12,7 +12,7 @@ const teams = [
     linkedin: 'https://www.linkedin.com/in/antoniputra/',
   },
   {
-    image: 'https://shorturl.at/qX034' || 'https://shorturl.at/oxyEN',
+    image: 'https://shorturl.at/oxyEN',
     name: 'Arryangga Aliev Pratamaputra',
     role: 'Founder',
     linkedin: 'https://www.linkedin.com/in/arryanggaputra/',
