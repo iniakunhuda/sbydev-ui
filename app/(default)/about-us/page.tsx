@@ -173,7 +173,7 @@ export default function AboutUs() {
 
         {/* Teams */}
         <section>
-          <div className="container max-w-screen-xl mx-auto px-4">
+          <div className="container mx-auto">
             <div className="text-center py-12 lg:py-24">
               <h2 className="font-semibold text-gray-900 text-2xl md:text-3xl lg:text-4xl mb-5">
                 Teams
