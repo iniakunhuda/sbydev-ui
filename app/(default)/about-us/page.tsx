@@ -185,7 +185,7 @@ export default function AboutUs() {
                   <img
                     src={team.image}
                     className="object-fill hover:opacity-70"
-                    alt="team.name + ' ' + team.role"
+                    alt={team.name + ' ' + team.role}
                   />
                   <div className="flex flex-col p-2 pb-6">
                     <div className="flex justify-start">
