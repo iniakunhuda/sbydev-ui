@@ -7,10 +7,6 @@ export const metadata = {
 };
 
 export default function Event() {
-  const formatDescription = (text) => {
-    const paragraphs = text.split('\n');
-    return paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>);
-  };
   return (
     <div className="max-w-6xl mx-auto sm:px-6 px-4">
       <section className="bg-gradient-to-b from-gray-100 to-white">
@@ -93,7 +89,7 @@ export default function Event() {
                     Minggu, 13 Juni 2023
                   </h4>
                   <p className="text-gray-600 text-justify">
-                    {formatDescription(event.description)}
+                    {event.description}
                   </p>
 
                   <Link
