@@ -20,3 +20,4 @@ const footerTitle = [
 ];
 
 export default footerTitle;
+ 
