@@ -4,18 +4,22 @@ import teams from './teams';
 
 // import { useState } from "react";
 
+export const metadata = {
+  title: 'SurabayaDev | about-us',
+  description: 'Page description',
+};
 export default function AboutUs() {
   // const [tab, setTab] = useState<number>(1);
 
   return (
-    <section className="bg-gradient-to-b from-gray-100 to-white">
-      <div className="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-green-50">
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white"></div>
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white"></div>
-      </div>
+    <div className="max-w-6xl mx-auto sm:px-6 px-4">
+      <section className="bg-gradient-to-b from-gray-100 to-white">
+        <div className="absolute inset-x-0 -bottom-14 -top-48 overflow-hidden bg-green-50">
+          <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white"></div>
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white"></div>
+        </div>
 
-      <div className="container max-w-screen-xl mx-auto px-4 pt-32 pb-12">
-        <section className="relative">
+        <section className="relative pt-32 pb-12">
           <div className="text-center py-0 lg:py-12">
             <h2 className="font-semibold text-gray-900 text-2xl md:text-3xl lg:text-4xl mb-5">
               Tentang Kami
@@ -402,7 +406,7 @@ export default function AboutUs() {
             </div>
           </div>
         </section>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

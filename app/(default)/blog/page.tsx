@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Blog - Surabayadev',
+  title: 'SurabayaDev | blog ',
   description: 'Page description',
-}
+};
 
 export default function Blog() {
   return (
