@@ -193,7 +193,7 @@ export default function AboutUs() {
                     alt={team.name + ' ' + team.role}
                   />
                   <div className="flex flex-col p-2 pb-6">
-                    <div className="flex justify-start">
+                    <div className="flex justify-start h-16">
                       <a
                         href={team.linkedin}
                         className="text-lg mb-4 font-medium hover:underline hover:opacity-70 line-clamp-2  text-green-600">
@@ -202,7 +202,6 @@ export default function AboutUs() {
                     </div>
                     <div className="flex flex-col items-start space-y-2 text-sm">
                       <span className="flex items-center gap-2">
-                        {/* <UserCircleIcon className="w-5 h-5" /> */}
                         <span>{team.role}</span>
                       </span>
                     </div>
@@ -210,141 +209,6 @@ export default function AboutUs() {
                 </div>
               ))}
             </div>
-            {/* <div className="">
-              <div className="flex flex-wrap -m-4">
-                <div className="w-full p-4 md:w-1/3">
-                  <div className="p-6 border shadow-xl rounded-3xl">
-                    <a className="inline-flex items-center mb-2">
-                      <Image
-                        width={50}
-                        height={50}
-                        alt="blog"
-                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                        className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full"
-                      />
-                      <span className="flex flex-col flex-grow pl-4">
-                        <span className="text-xs uppercase text-slate-600">
-                          Terry Crews
-                        </span>
-                      </span>
-                    </a>
-                    <p className="text-sm leading-relaxed text-gray-500">
-                      "Wicked Templates is the next killer app. Wicked Templates
-                      was worth a fortune to my company."
-                    </p>
-                  </div>
-                  <div className="p-6 mt-4 border shadow-xl rounded-3xl">
-                    <a className="inline-flex items-center mb-2">
-                      <Image
-                        width={50}
-                        height={50}
-                        alt="blog"
-                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                        className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full"
-                      />
-                      <span className="flex flex-col flex-grow pl-4">
-                        <span className="text-xs uppercase text-slate-600">
-                          Will Farrel
-                        </span>
-                      </span>
-                    </a>
-                    <p className="text-sm leading-relaxed text-gray-500">
-                      "Thanks Wicked Templates! I couldn't have asked for more
-                      than this. Man, this thing is getting better and better as
-                      I learn more about it. Nice work on your Wicked
-                      Templates."
-                    </p>
-                  </div>
-                </div>
-                <div className="w-full p-4 md:w-1/3">
-                  <div className="p-6 border shadow-xl rounded-3xl">
-                    <a className="inline-flex items-center mb-2">
-                      <Image
-                        width={50}
-                        height={50}
-                        alt="blog"
-                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                        className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full"
-                      />
-                      <span className="flex flex-col flex-grow pl-4">
-                        <span className="text-xs uppercase text-slate-600">
-                          Chris Tucker
-                        </span>
-                      </span>
-                    </a>
-                    <p className="text-sm leading-relaxed text-gray-500">
-                      "I love Wicked Templates. I could probably go into sales
-                      for you."
-                    </p>
-                  </div>
-                  <div className="p-6 mt-4 border shadow-xl rounded-3xl">
-                    <a className="inline-flex items-center mb-2">
-                      <Image
-                        width={50}
-                        height={50}
-                        alt="blog"
-                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                        className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full"
-                      />
-                      <span className="flex flex-col flex-grow pl-4">
-                        <span className="text-xs uppercase text-slate-600">
-                          Marie Curie
-                        </span>
-                      </span>
-                    </a>
-                    <p className="text-sm leading-relaxed text-gray-500">
-                      "Great job, I will definitely be ordering again! I
-                      couldn't have asked for more than this. Really good."
-                    </p>
-                  </div>
-                </div>
-                <div className="w-full p-4 md:w-1/3">
-                  <div className="p-6 border shadow-xl rounded-3xl">
-                    <a className="inline-flex items-center mb-2">
-                      <Image
-                        width={50}
-                        height={50}
-                        alt="blog"
-                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                        className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full"
-                      />
-                      <span className="flex flex-col flex-grow pl-4">
-                        <span className="text-xs uppercase text-slate-600">
-                          Kevin Hart
-                        </span>
-                      </span>
-                    </a>
-                    <p className="text-sm leading-relaxed text-gray-500">
-                      "I just can't get enough of Wicked Templates. I want to
-                      get a T-Shirt with Wicked Templates on it so I can show it
-                      off to everyone. Absolutely wonderful! Keep up the
-                      excellent work. Wicked Templates is worth much more than I
-                      paid."
-                    </p>
-                  </div>
-                  <div className="p-6 mt-4 border shadow-xl rounded-3xl">
-                    <a className="inline-flex items-center mb-2">
-                      <Image
-                        width={50}
-                        height={50}
-                        alt="blog"
-                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                        className="flex-shrink-0 object-cover object-center w-8 h-8 rounded-full"
-                      />
-                      <span className="flex flex-col flex-grow pl-4">
-                        <span className="text-xs uppercase text-slate-600">
-                          Sara Fitzpatrick
-                        </span>
-                      </span>
-                    </a>
-                    <p className="text-sm leading-relaxed text-gray-500">
-                      "Your company is truly upstanding and is behind its
-                      product 100%."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </section>
 
