@@ -42,7 +42,7 @@ export default function Header() {
                 <li>
                   <Link
                     href={item.link}
-                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">
+                    className="font-sans hover:font-extrabold text-gray-600 hover:bg-green-200 rounded-xl hover:text-gray-900 px-5 py-2 flex items-center transition duration-150 ease-in-out mx-4">
                     {item.title}
                   </Link>
                 </li>
@@ -51,7 +51,11 @@ export default function Header() {
               <li>
                 <Link
                   href="https://www.instagram.com/surabayadev/"
-                  className="btn-sm text-gray-200 bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:bg-gray-800 ml-3">
+                  className="btn-sm text-gray-200
+                  hover:bg-gradient-to-bl from-[#DD2A7B] via-[#8134AF] to-[#F58529]
+                  bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] 
+                  ">
+                  {/* hover:bg-gray-800 ml-3 */}
                   <span>Hubungi Kami</span>
                   <svg
                     className="w-3 h-3 fill-current text-gray-200 shrink-0 ml-2 -mr-1"

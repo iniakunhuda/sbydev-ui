@@ -116,7 +116,7 @@ export default function Footer() {
               <li className="ml-4">
                 <a
                   href={item.link}
-                  className="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                  className="flex justify-center items-center text-gray-600 hover:text-white hover:bg-gray-600 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
                   aria-label={item.text}>
                   <svg
                     className="w-8 h-8 fill-current"

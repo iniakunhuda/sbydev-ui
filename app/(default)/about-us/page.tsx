@@ -177,7 +177,8 @@ export default function AboutUs() {
 
         {/* Teams */}
         <section>
-          <div className="container mx-auto">
+          <div className="container mx-auto ">
+
             <div className="text-center py-12 lg:py-24">
               <h2 className="font-semibold text-gray-900 text-2xl md:text-3xl lg:text-4xl mb-5">
                 Teams
@@ -185,7 +186,7 @@ export default function AboutUs() {
             </div>
             <div className="grid grid-cols md:grid-cols-4 gap-4">
               {teams.map((team) => (
-                <div className="flex flex-col border rounded-lg overflow-hidden bg-white">
+                <div className="flex flex-col border rounded-lg overflow-hidden bg-white hover:shadow-xl">
                   <img
                     src={team.image}
                     className="object-fill hover:opacity-70"

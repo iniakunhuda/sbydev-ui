@@ -16,6 +16,18 @@ const events = [
     map: 'https://www.google.com/maps/place/Universitas+17+Agustus+1945+Surabaya/@-7.2946133,112.7712038,15z/data=!4m6!3m5!1s0x2dd7fa53bc20b1a1:0xabd54bc4c61087af!8m2!3d-7.2984521!4d112.7667651!16s%2Fg%2F121ln18r?entry=ttu',
     link: 'https://www.eventbrite.com/e/breaking-the-barrier-unleashing-the-power-of-frontend-fullstack-web-dev-tickets-661811404727',
   },
+  {
+    id: '2',
+    imageUrl:
+      'https://eventsurabaya.net/wp-content/uploads/2020/10/MP-ES-Implement-Deisgn-Thinking-In-Product-Development-SurabayaDev-Copy-500-x-500.jpg',
+    price: 'Gratis',
+    place: 'Dilo Surabaya',
+    title: 'Judul Event',
+    time: 'Saturday, June 24 · 10am - 12pm WIB',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    map: 'https://goo.gl/maps/vx3gDj6mZ7dhW3Ju7',
+    link: '/event/event-detail',
+  },
 ];
 
 export default events;

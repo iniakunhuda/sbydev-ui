@@ -29,19 +29,21 @@ export default function Event() {
 
         <section className="my-5">
           {/* Items */}
-          <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-1 items-start md:max-w-2xl lg:max-w-none ">
+          <div className=" mx-auto grid gap-6 md:grid-cols-1 items-start">
             {/* 1st item */}
 
             {events.map((event) => (
-              <div className="relative flex flex-col md:flex-row items-center md:items-start bg-white rounded shadow-xl mb-8">
+              <div className="relative flex flex-col md:flex-row items-center md:items-start bg-white rounded shadow-xl md:shadow-none md:hover:shadow-xl mb-8">
                 <img
-                  alt=""
+                  alt={event.title}
                   className="md:w-64 sm:w-full h-full object-cover mb-6 md:mb-0 md:mr-6 rounded"
                   src={event.imageUrl}
                 />
                 <div className="md:text-left p-4">
                   <div>
-                    <a className="mt-5 btn outline mr-3 outline-offset-1 outline-green-700 text-green-700 py-1 px-2 rounded inline-flex text-xs items-center">
+                    <a
+                      className="mt-5 btn outline mr-3 outline-offset-1 hover:bg-green-700 hover:outline-none hover:text-white
+                     outline-green-700 text-green-700 py-1 px-2 rounded inline-flex text-xs items-center">
                       <svg
                         className="w-4 h-4 mr-2"
                         fill="none"
@@ -60,7 +62,7 @@ export default function Event() {
                     <a
                       target="_blank"
                       href={event.map}
-                      className="mt-5 btn outline mr-3 outline-offset-1 outline-green-700 text-green-700 py-1 px-2 rounded inline-flex text-xs items-center">
+                      className="mt-5 btn outline mr-3 outline-offset-1 hover:bg-green-700 hover:outline-none hover:text-white outline-green-700 text-green-700 py-1 px-2 rounded inline-flex text-xs items-center">
                       <svg
                         className="w-4 h-4 mr-2"
                         fill="none"
@@ -86,31 +88,31 @@ export default function Event() {
                     {event.title}
                   </h4>
                   <h4 className="text-sm text-gray-400 leading-snug tracking-tight mb-3">
-                    Minggu, 13 Juni 2023
+                    {event.time}
                   </h4>
-                  <p className="text-gray-600 text-justify">
+
+                  <p className="text-gray-600 text-justify overflow-ellipsis overflow-hidden">
                     {event.description}
                   </p>
 
                   <Link
                     href={event.link}
                     target="_blank"
-                    className="btn text-sm md:mt-15 mt-10 py-2 px-6 text-white bg-black hover:bg-green-800 rounded-full">
+                    className="btn text-sm md:mt-15 mt-10 py-2 px-6 text-white bg-black hover:bg-gray-200 hover:text-black hover:shadow-xl rounded-full">
                     Detail Event
                   </Link>
                 </div>
               </div>
             ))}
-            {[1, 2, 3, 4].map((id) => (
-              <div className="relative flex flex-col md:flex-row items-center md:items-start bg-white rounded shadow-xl mb-8">
+            {/* {[1, 2].map(() => (
+              <div className="relative flex flex-col md:flex-row items-center md:items-start bg-white rounded shadow-xl md:shadow-none md:hover:shadow-xl mb-8">
                 <img
-                  src="https://eventsurabaya.net/wp-content/uploads/2020/10/MP-ES-Implement-Deisgn-Thinking-In-Product-Development-SurabayaDev-Copy-500-x-500.jpg"
-                  alt=""
+                  src='' alt=""
                   className="md:w-64 sm:w-full h-full object-cover mb-6 md:mb-0 md:mr-6 rounded"
                 />
                 <div className="md:text-left p-4">
                   <div>
-                    <a className="btn outline mr-3 outline-offset-1 outline-green-700 text-green-700 py-1 px-2 rounded inline-flex text-xs items-center">
+                    <a className="btn outline mr-3 outline-offset-1 outline-green-700 hover:outline-white text-green-700 py-1 px-2 rounded inline-flex text-xs items-center">
                       <svg
                         className="w-4 h-4 mr-2"
                         fill="none"
@@ -144,12 +146,12 @@ export default function Event() {
                           stroke-linejoin="round"
                           d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
                       </svg>
-                      <span className="">Dilo Surabaya</span>
+                      <span className=""></span>
                     </a>
                   </div>
 
                   <h4 className="text-xl font-bold leading-snug tracking-tight mb-0 mt-3">
-                    Judul Event
+                    
                   </h4>
                   <h4 className="text-sm text-gray-400 leading-snug tracking-tight mb-3">
                     Minggu, 13 Juni 2023
@@ -160,12 +162,12 @@ export default function Event() {
 
                   <Link
                     href="/event/event-detail"
-                    className="btn text-sm md:mt-15 mt-10 py-2 px-6 text-white bg-black hover:bg-green-800 rounded-full">
+                    className="btn text-sm md:mt-15 mt-10 py-2 px-6 text-white bg-black hover:bg-gray-200 hover:text-black hover:shadow-xl rounded-full">
                     Detail Event
                   </Link>
                 </div>
               </div>
-            ))}
+            ))} */}
           </div>
         </section>
       </section>
